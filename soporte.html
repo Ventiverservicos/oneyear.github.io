@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - Ventiver Servicios</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00aaff, #004466);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #004466;
+        }
+
+        header .logo img {
+            width: 120px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+       
+        section {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #004466;
+            font-size: 2rem;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-header {
+            background-color: #00aaff;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .faq-header:hover {
+            background-color: #0088cc;
+        }
+
+        .faq-header span {
+            font-size: 1.5rem;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 2px solid #00aaff;
+        }
+
+        .faq-answer a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+    }
+        .options {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #e0f7ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .options h2 {
+            text-align: center;
+            color: #004466;
+        }
+
+        .options ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .options ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .options ul li a {
+            text-decoration: none;
+            color: #004466;
+            font-weight: bold;
+            background-color: #00aaff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .options ul li a:hover {
+            background-color: #0088cc;
+            color: white;
+        }
+
+        footer {
+            background-color: #004466;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        footer ul li a img {
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        footer ul li a img:hover {
+            transform: scale(1.2);
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+        .show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body onload="hideLoader()">
+
+    <!-- GIF de carga -->
+    <div id="loader">
+        <img src="axial.gif" alt="Cargando..." width="120" height="120">
+    </div>
+
+    <!-- Contenido de la página -->
+    <div id="content" style="display:none;">
+        <header>
+            <div class="logo">
+                <img src="logo-removebg-preview.png" alt="Logo Ventiver Servicios">
+            </div>
+            <h1>Soporte Técnico</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="soporte.html">Soporte Técnico</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Preguntas Frecuentes</h2>
+
+            <div class="faq">
+                <div class="faq-header">
+                    <span>1. ¿Por qué mi ventilador no enciende?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Verifica si está conectado a la corriente. Si el problema persiste, consulta a un técnico.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-header">
+                    <span>2. ¿Cómo puedo programar una cita para revisión?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Puedes pedir una cita a través de nuestro <a href="citas.html">formulario de citas</a>.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-header">
+                    <span>3. Quiero cotizar un producto, ¿cómo lo hago?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Visita nuestra sección de <a href="cotizar.html">cotizaciones</a> para más información.
+                </div>
+            </div>
+        </section>
+
+        <div class="options">
+            <h2>Opciones Adicionales</h2>
+            <ul>
+                <li><a href="visita.html">Pedir una visita técnica</a></li>
+                <li><a href="cotizar.html">Solicitar una cotización</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/tu-perfil" target="_blank">
+                    <img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.tiktok.com/@tu-usuario" target="_blank">
+                    <img src="tik tok.png" alt="TikTok"></a></li>
+                <li><a href="https://wa.me/tu-número-de-whatsapp" target="_blank">
+                    <img src="whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+            <p>Desarrollado por <a href="https://tupagina.com" target="_blank" style="color:white; text-decoration:underline;">Tu Nombre</a> | Fecha de creación: 2024-09-20</p>
+        </footer>
+        
+    </div>
+
+    <script>
+        function hideLoader() {
+            setTimeout(function () {
+                document.getElementById('loader').style.display = 'none'; 
+                document.getElementById('content').style.display = 'block'; 
+            }, 2000); 
+        }
+
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const answer = header.nextElementSibling;
+                answer.classList.toggle('show');
+                const isOpen = answer.classList.contains('show');
+                header.querySelector('span').textContent = isOpen ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+
+</html>
