@@ -211,3 +211,7 @@ footer {
 #main-content {
     display: none;
 }
+.logo img {
+    width: 1800px; /* Ajusta este valor para aumentar el tamaño del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+}
