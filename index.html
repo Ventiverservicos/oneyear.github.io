@@ -1,257 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventiver Servicios</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Feliz Aniversario, Mi Amor</title>
     <style>
-   
-        body.fondo {
-            font-family: 'Arial', sans-serif;
+        body {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #e0c3fc, #8ec5fc);
             color: #333;
-        }
-
-        header {
-            background-color: #005a9e;
-            color: white;
-            padding: 20px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #003e70;
-        }
-
-        .main-content {
+        .container {
+            background: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            max-width: 700px;
+            padding: 50px;
             text-align: center;
-            padding: 50px 20px;
+            position: relative;
         }
 
-        .main-content h2 {
-            color: #005a9e;
-            margin-bottom: 10px;
-            font-size: 2.5em;
+        h1 {
+            font-size: 3.5rem;
+            color: #ff4e50;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out forwards;
+            opacity: 0;
         }
 
-        .main-content p {
-            font-size: 1.2em;
-            color: #666;
+        h2 {
+            font-size: 1.8rem;
+            color: #333;
             margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeIn 3s ease-out forwards;
         }
 
-        .btn-primary {
-            background-color: #005a9e;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #003e70;
-        }
-
-        .info-empresa {
-            background-color: #eef1f5;
-            padding: 50px 20px;
-        }
-
-        .info-empresa h2 {
-            text-align: center;
-            color: #005a9e;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        .info-empresa p {
-            text-align: center;
-            color: #555;
-            margin-bottom: 20px;
+        p {
+            font-size: 1.3rem;
             line-height: 1.6;
+            color: #555;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 4s ease-out forwards;
         }
 
-        /* Mapa */
-        #map {
-            width: 100%;
-            height: 300px;
-            background-color: #ccc;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        /* Social Media Icons */
-        .social-container {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #003e70;
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ff4e50;
             color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            opacity: 0;
+            animation: fadeIn 4.5s ease-out forwards;
         }
 
-        .social-container ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        a:hover {
+            background-color: #ff758c;
         }
 
-        .social-container ul li {
-            margin: 0 15px;
-        }
-
-        .social-container ul li a {
-            display: block;
-            width: 40px;
-            height: 40px;
-        }
-
-        .social-icon {
-            width: 100%;
-            height: auto;
-        }
-
-        footer {
-            background-color: #005a9e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Pantalla de carga */
-        #loading-screen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.7);
+        /* Estilos para la animación de carga */
+        .loader-container {
+            display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
 
-        .gif-carga {
-            width: 150px;
-            height: auto;
+        .loader-text {
+            font-size: 1.5rem;
+            color: #ff4e50;
+            margin-bottom: 20px;
+            animation: blinkText 1.5s infinite;
         }
 
-        #main-content {
-            animation: fadeIn 1s ease-in-out;
+        .dots {
+            font-size: 2rem;
+            color: #ff4e50;
+        }
+
+        @keyframes blinkText {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(50px);
             }
-
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
+
     </style>
-</head>
-
-<body class="fondo">
-
-
-    <div id="loading-screen">
-        <img src="axial.gif" alt="Cargando" class="gif-carga">
-    </div>
-
-
-    <div id="main-content" style="display: none;">
-        <header>
-            <div class="logo">
-                <img src="logo-removebg-preview.png" alt="Logo Ventiver Servicios">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="soporte.html">Soporte Técnico</a></li>
-                    <li><a href="cotizar.html">Cotizar</a></li>
-                    <li><a href="ins.html">instalaciones</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="main-content">
-            <h2>Bienvenido a Ventiver Servicios</h2>
-            <p>Somos expertos en soluciones de ventilación industrial, ofreciendo servicios y productos de alta calidad.</p>
-            <a href="productos.html" class="btn-primary" id="ver-productos">Ver Productos</a>
-        </section>
-
-        <section class="info-empresa">
-            <h2>Sobre Nosotros</h2>
-            <p>En Ventiver Servicios nos dedicamos a brindar las mejores soluciones en ventilación industrial. Nuestro equipo de expertos está listo para atender sus necesidades y ofrecer un servicio de calidad.</p>
-            <p><strong>Ubicación:</strong>Pereferico Carlos Pellicer camara no. 156. col. punta Brava, villahermosa Tabasco.</p>
-            <div id="map"></div>
-        </section>
-        
-
-        <footer>
-            <div class="social-container">
-                <p>Síguenos en nuestras redes sociales:</p>
-                <ul>
-                    <li><a href="https://www.facebook.com/VentiverMX/?locale=hr_HR&_rdr" target="_blank">
-                        <img src="facebook.png" alt="Facebook" class="social-icon"></a></li>
-                    <li><a href="https://www.tiktok.com/@ventiver.oficial" target="_blank">
-                        <img src="tik tok.png" alt="TikTok" class="social-icon"></a></li>
-                    <li><a href="https://wa.me/message/BSV34TY76QROC1" target="_blank">
-                        <img src="whatsapp.png" alt="WhatsApp" class="social-icon"></a></li>
-                </ul>
-            </div>
-            <p>Desarrollado por [BSU] Binary System Universal | Fecha de creación: 2024-09-19</p>
-        </footer>
-    </div>
-
     <script>
-        window.addEventListener('load', function () {
+        function showLoader() {
+            const loader = document.querySelector('.loader-container');
+            loader.style.display = 'block';
 
-            setTimeout(function () {
-
-                document.getElementById('loading-screen').style.display = 'none';
-
-                document.getElementById('main-content').style.display = 'block';
+            // Simulamos la carga durante 3 segundos antes de redirigir
+            setTimeout(() => {
+                window.location.href = "2.html"; // Redirige a la página de recuerdos
             }, 3000);
-        });
+        }
+
+        function animateDots() {
+            const dots = document.querySelector('.dots');
+            let dotCount = 0;
+
+            setInterval(() => {
+                dotCount = (dotCount + 1) % 4;
+                dots.textContent = '.'.repeat(dotCount);
+            }, 500);
+        }
+
+        window.onload = animateDots;
     </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Feliz Primer Aniversario</h1>
+        <h2>Siempre juntos, no importa la distancia</h2>
+        <p>
+            Ha sido un año maravilloso, lleno de amor y alegría. Cada momento a tu lado es único, y no importa lo lejos que estemos, 
+            siempre siento tu amor cerca. Gracias por ser mi inspiración cada día.
+        </p>
+        <a href="javascript:void(0)" onclick="showLoader()">Nuestros recuerdos especiales</a>
+    </div>
+
+    <!-- Animación de carga romántica -->
+    <div class="loader-container">
+        <div class="loader-text"></div>
+        <div class="dots">...</div>
+    </div>
 
 </body>
-
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Especiales</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff4e50;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .message-container {
+            width: 100%;
+            max-width: 800px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .message-item {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+            position: relative;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .message-item:hover {
+            transform: scale(1.02);
+        }
+
+        .message-item h3 {
+            color: #ff4e50;
+            margin-bottom: 10px;
+        }
+
+        .section-links {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .section-links a {
+            padding: 15px 40px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links a:hover {
+            background-color: #ff758c;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff4e50;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mensajes Especiales</h1>
+        <p>Palabras que llenan nuestro corazón</p>
+    </header>
+
+    <div class="message-container">
+        <!-- Mensaje 1 -->
+        <div class="message-item">
+            <h3>Te extraño</h3>
+            <p>La distancia puede separarnos físicamente, pero siempre estás en mi corazón.</p>
+        </div>
+
+        <!-- Mensaje 2 -->
+        <div class="message-item">
+            <h3>Eres mi inspiración</h3>
+            <p>Tu fuerza y determinación me motivan a ser mejor cada día.</p>
+        </div>
+
+        <!-- Mensaje 3 -->
+        <div class="message-item">
+            <h3>Siempre estaré aquí</h3>
+            <p>No importa la distancia, siempre estaré a tu lado, apoyándote en todo.</p>
+        </div>
+
+        <!-- Mensaje 4 -->
+        <div class="message-item">
+            <h3>Nuestra historia apenas comienza</h3>
+            <p>Estoy emocionado por todos los momentos que aún nos quedan por compartir.</p>
+        </div>
+    </div>
+
+    <!-- Sección de botones para otras páginas -->
+    <div class="section-links">
+        <a href="index.html">Inicio</a>
+        <a href="4.html">Planes Futuros</a>
+        <a href="7.html">Canciones Compartidas</a>
+    </div>
+
+    <footer>
+        <p>Volver a <a href="index.html">Inicio</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Secretos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 50px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+            color: #f8d7da;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .secrets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .secret-box {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            color: #333;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .secret-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .secret-box .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ff758c;
+        }
+
+        .secret-content {
+            font-size: 1.5rem;
+            color: #555;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .secret-box.active .secret-content {
+            opacity: 1;
+            max-height: 300px;
+        }
+
+        .section-links {
+            margin-top: 50px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .section-links a {
+            padding: 15px 30px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links a:hover {
+            background-color: #ff7eb3;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #f8d7da;
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Nuestros Secretos</h1>
+    <p>Cosas solo nuestras, que nadie más sabe...</p>
+
+    <div class="secrets-container">
+        <!-- Secreto 1 -->
+        <div class="secret-box" onclick="toggleSecret(this)">
+            <div class="icon">💌</div>
+            <h3>Nuestro primer mensaje</h3>
+            <div class="secret-content">
+                <p>El primer mensaje que te envié fue cuando apenas sabía qué decirte, pero sabía que quería conocerte más.</p>
+            </div>
+        </div>
+
+        <!-- Secreto 2 -->
+        <div class="secret-box" onclick="toggleSecret(this)">
+            <div class="icon">📸</div>
+            <h3>El secreto de nuestras fotos</h3>
+            <div class="secret-content">
+                <p>A veces poso de más en las fotos solo para verte reírte de mis caras extrañas.</p>
+            </div>
+        </div>
+
+        <!-- Secreto 3 -->
+        <div class="secret-box" onclick="toggleSecret(this)">
+            <div class="icon">🎶</div>
+            <h3>Nuestra canción oculta</h3>
+            <div class="secret-content">
+                <p>Hay una canción que siempre me recuerda a ti, pero nunca te lo he dicho: "Te amo tanto" de OV7.</p>
+            </div>
+        </div>
+
+        <!-- Secreto 4 -->
+        <div class="secret-box" onclick="toggleSecret(this)">
+            <div class="icon">🌙</div>
+            <h3>La promesa nocturna</h3>
+            <div class="secret-content">
+                <p>Cada noche antes de dormir, pienso en ti y hago una pequeña promesa de que siempre te cuidaré.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de enlaces para otras páginas -->
+    <div class="section-links">
+        <a href="index.html">Inicio</a>
+        <a href="mensajes.html">Mensajes Especiales</a>
+        <a href="nuestro_amor.html">Nuestro Amor</a>
+    </div>
+
+    <footer>
+        <p>Volver a <a href="index.html">Inicio</a></p>
+    </footer>
+
+    <script>
+        function toggleSecret(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

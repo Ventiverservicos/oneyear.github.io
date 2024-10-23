@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: #ffe6e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 50px;
+            color: #ff4e50;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin: 20px;
+            color: #555;
+            text-align: center;
+        }
+
+        .love-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .quote-box {
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quote-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-box p {
+            font-size: 1.6rem;
+            color: #ff4e50;
+        }
+
+        .love-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .love-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .love-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .section-links a {
+            padding: 15px 30px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links a:hover {
+            background-color: #ff7eb3;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #555;
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Nuestro Amor</h1>
+
+    <div class="love-section">
+        <div class="quote-box">
+            <p>"La distancia no significa nada cuando alguien significa todo."</p>
+        </div>
+
+        <div class="quote-box">
+            <p>"Aunque estemos lejos, nuestros corazones laten al mismo ritmo."</p>
+        </div>
+
+        <div class="quote-box">
+            <p>"Contigo, cada día se siente como una nueva aventura en el amor."</p>
+        </div>
+    </div>
+
+    <div class="love-images">
+        <img src="https://example.com/love-image1.jpg" alt="Momento especial 1">
+        <img src="https://example.com/love-image2.jpg" alt="Momento especial 2">
+        <img src="https://example.com/love-image3.jpg" alt="Momento especial 3">
+    </div>
+
+    <!-- Sección de enlaces a otras páginas -->
+    <div class="section-links">
+        <a href="index.html">Inicio</a>
+        <a href="3.html">Mensajes Especiales</a>
+        <a href="5.html">Nuestros Secretos</a>
+    </div>
+
+    <footer>
+        <p>Volver a <a href="index.html">Inicio</a></p>
+    </footer>
+
+</body>
+</html>

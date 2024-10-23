@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Futuro Juntos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff4e50;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .goals-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .goal-item {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.4s ease;
+            font-size: 1.5rem;
+            color: #555;
+            position: relative;
+        }
+
+        .goal-item:hover {
+            transform: scale(1.05);
+        }
+
+        .goal-item img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .goal-item h3 {
+            color: #ff4e50;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .section-links {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .section-links a {
+            padding: 15px 40px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links a:hover {
+            background-color: #ff758c;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff4e50;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nuestro Futuro Juntos</h1>
+        <p>Planes y sueños que queremos alcanzar</p>
+    </header>
+
+    <div class="goals-container">
+        <!-- Meta 1 -->
+        <div class="goal-item">
+            <img src="https://img.icons8.com/fluency/100/000000/airplane-take-off.png" alt="Viajar juntos">
+            <h3>Viajar juntos</h3>
+            <p>Descubrir el mundo y crear recuerdos inolvidables.</p>
+        </div>
+
+        <!-- Meta 2 -->
+        <div class="goal-item">
+            <img src="https://img.icons8.com/fluency/100/000000/home.png" alt="Vivir juntos">
+            <h3>Vivir juntos</h3>
+            <p>Construir un hogar lleno de amor y felicidad.</p>
+        </div>
+
+        <!-- Meta 3 -->
+        <div class="goal-item">
+            <img src="year.jpg" alt="Casarnos">
+            <h3>Casarnos</h3>
+            <p>Unir nuestras vidas en una ceremonia especial.</p>
+        </div>
+
+        <!-- Meta 4 -->
+        <div class="goal-item">
+            <img src="https://img.icons8.com/fluency/100/000000/baby.png" alt="Tener hijos">
+            <h3>Tener hijos</h3>
+            <p>Formar una hermosa familia llena de amor.</p>
+        </div>
+    </div>
+
+ 
+    <div class="section-links">
+        <a href="index.html">Inicio</a>
+        <a href="2.html">Mensajes Especiales</a>
+        <a href="7.html">Canciones Compartidas</a>
+    </div>
+
+    <footer>
+        <p>Volver a <a href="index.html">Inicio</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Futuro Juntos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff4e50;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1400px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .goal-item {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform: scale(0.98);
+            position: relative;
+        }
+
+        .goal-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .goal-item .text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .goal-item h2 {
+            font-size: 1.8rem;
+            color: #ff4e50;
+            margin-bottom: 10px;
+        }
+
+        .goal-item p {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        .section-links {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .section-links a {
+            padding: 15px 40px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-links a:hover {
+            background-color: #ff758c;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff4e50;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nuestro Futuro Juntos</h1>
+        <p>Planes, sueños y momentos que aún están por venir</p>
+    </header>
+
+    <div class="goals-grid">
+        <!-- Sueño o meta 1 -->
+        <div class="goal-item">
+            <div class="text">
+                <h2>El primer viaje juntos</h2>
+                <p>Explorar nuevas ciudades y culturas, construyendo recuerdos únicos.</p>
+            </div>
+        </div>
+
+        <!-- Sueño o meta 2 -->
+        <div class="goal-item">
+            <div class="text">
+                <h2>Nuestra casa soñada</h2>
+                <p>Imaginando el lugar que llamaremos hogar, lleno de amor y risas.</p>
+            </div>
+        </div>
+
+        <!-- Sueño o meta 3 -->
+        <div class="goal-item">
+            <div class="text">
+                <h2>Cada reunión</h2>
+                <p>Contando los días hasta el próximo abrazo, soñando con cada reencuentro.</p>
+            </div>
+        </div>
+
+        <!-- Sueño o meta 4 -->
+        <div class="goal-item">
+            <div class="text">
+                <h2>Los momentos cotidianos</h2>
+                <p>Compartir cada pequeña cosa: ver películas, cocinar juntos, y simplemente estar cerca.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de botones para otras páginas -->
+    <div class="section-links">
+        <a href="3.html">Mensajes Especiales</a>
+        <a href="2.html">Más planes juntos</a>
+        <a href=".html">Canciones Compartidas</a>
+    </div>
+
+    <footer>
+        <p>Volver a <a href="index.html">Inicio</a></p>
+    </footer>
+
+</body>
+</html>
